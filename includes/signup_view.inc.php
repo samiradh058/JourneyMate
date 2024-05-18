@@ -5,7 +5,6 @@ function check_signup_error() {
         $errors= $_SESSION['error_signup'];
 
         echo '<br>';
-        echo 'hello';
 
         foreach($errors as $error) {
             echo '<p>' . $error . '</p>';
@@ -13,12 +12,10 @@ function check_signup_error() {
 
         unset($_SESSION['error_signup']);
     }
-    // } else if(isset($_GET['signup']) && $_GET['signup'] === 'success') {
-    //     echo '<br>';
-    //     echo '<p>SignUp Success</p>';
-    // }
+
     else if(isset($_SESSION['success'])){
         echo '<br>';
         echo '<p>SignUp Successful</p>';
+        unset($_SESSION['success']);
     }
 }

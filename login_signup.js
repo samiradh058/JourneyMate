@@ -5,6 +5,7 @@ const loginBtn = document.querySelector(".login-btn");
 const signupX = document.querySelector(".signup-x");
 const loginX = document.querySelector(".login-x");
 const formContainer = document.querySelector(".form-container");
+const form = document.querySelector(".form");
 
 loginBtn.addEventListener("click", () => {
   formContainer.classList.add("visible-bg");
@@ -38,4 +39,9 @@ formContainer.addEventListener("click", function (e) {
     loginModal.style.opacity = 0;
     formContainer.classList.remove("visible-bg");
   }
+});
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("form submited");
 });
