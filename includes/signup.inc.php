@@ -32,18 +32,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if($errors) {
             $_SESSION['error_signup'] = $errors;
-            header('Location: ../index.php');
+            header('Location: ../signup_box.php');
             die();
         }
-
-        create_user($pdo, $username, $email, $pwd);
-
-        header('Location: ../index.php');
-        $_SESSION['success'] = true;
-        die();
-
+        else{
+            $_SESSION['success'] = true;
+            create_user($pdo, $username, $email, $pwd);
+            header('Location: ../signup_box.php');
+            die();
+        }
     }catch(PDOException $e){
-        die('Query failed: '. $e->getMessaage());
+        die('Query failed: '. $e->getMessage());
     }
 } else{
     header('Location: ../index.php');

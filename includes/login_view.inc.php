@@ -9,7 +9,7 @@ body {
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  font-size:20px;
+  font-size:24px;
   font-weight:700;
   margin-top:-20px;
 }
@@ -26,22 +26,19 @@ body {
 <body>
 <?php
 
-function check_signup_error() {
+function check_login_error() {
     echo '<div>';
-    if(isset($_SESSION['error_signup'])) {
-        $errors = $_SESSION['error_signup'];
+    if(isset($_SESSION['error_login'])) {
+        $errors = $_SESSION['error_login'];
 
         foreach ($errors as  $error) {
             echo '<div class="message"><p class="error-message">' . htmlspecialchars($error) . '</p></div>';
         }
 
-        unset($_SESSION['error_signup']);
-    } elseif(isset($_SESSION['success'])) {
-        echo '<br>';
-        echo '<div class="message"><p class="success-message">SignUp Successful</p></div>';
-        unset($_SESSION['success']);
+        unset($_SESSION['error_login']);
     }
     echo '</div>';
 }
 ?>
 </body>
+
