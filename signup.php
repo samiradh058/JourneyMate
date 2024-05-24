@@ -14,7 +14,7 @@
 <body>
 <div class="form-container">
 <img class="main-icon" src="./Images/Main-icon.png" alt="JourneyMate Icon" />
-<a class='login-btn btn' href="./login_box.php">Login</a>
+<a class='login-btn btn' href="./login.php">Login</a>
     <div class="signup-container modal">
       <div class="x-btn signup-x">&times</div>
         <h2>SignUp</h2>

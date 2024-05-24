@@ -9,9 +9,9 @@ body {
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  font-size:24px;
+  font-size:22px;
   font-weight:700;
-  margin-top:-20px;
+  margin-top:-24px;
 }
 
 .error-message {

@@ -1,14 +1,15 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-        header('Location: ./homepage.php');
+    require_once 'includes/login_view.inc.php';
+
+    if(isset($_SESSION['homepage_enter']) && $_SESSION['homepage_enter'] === true) {
+        header('Location: ./');
         die();
     }
 
-    require_once 'includes/login_view.inc.php';
-?>
 
+if(!isset($_SESSION['loggedin'])){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
 <body>
 <div class="form-container">
 <img class="main-icon" src="./Images/Main-icon.png" alt="JourneyMate Icon" />
-<a class='signup-btn btn' href="./signup_box.php">SignUp</a>
+<a class='signup-btn btn' href="./signup.php">SignUp</a>
     <div class="login-container modal">
         <div class="x-btn login-x">&times</div>
         <h2>Login</h2>
@@ -45,4 +46,8 @@
 <script src="login_signup.js"></script>
 </body>
 </html>
-
+<?php
+} else{
+    header('Location: homepage.php');
+    die();
+}?>

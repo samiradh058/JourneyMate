@@ -27,9 +27,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors['login_incorrect'] = 'Incorrect password';
         }
 
+        echo 'errors';
+
         if($errors) {
             $_SESSION['error_login'] = $errors;
-            header('Location: ../login_box.php');
+            header('Location: ../login.php');
             die();
         }
         else{
