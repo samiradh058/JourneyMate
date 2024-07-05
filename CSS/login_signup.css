@@ -33,17 +33,13 @@ body {
   overflow: hidden;
 }
 
-/* background-color and backdrop-filter is not working */
-
 .form-container {
   position: fixed;
-  background-image: linear-gradient(to right, #ff8a65, #ffc947, #3f51b5);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-image: linear-gradient(to right, #c45c40, #b29430, #2c3a8a);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  backdrop-filter: blur(8px);
 }
 
 .modal {
@@ -84,7 +80,8 @@ body {
   position: relative;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 320px;
   padding: 15px 15px 15px 50px;
   border: none;

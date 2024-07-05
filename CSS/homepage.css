@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Roboto, serif;
+}
+
+.main-icon {
+  height: 100px;
+  margin: 8px 0 0 8px;
+  z-index: 1;
+}
+
+.big-container {
+  background-image: linear-gradient(to bottom, #ff8a65, #ffc947, #3f51b5);
+}
+
+.top-container {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.imgAndName {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgAndName h1 {
+  font-family: Playwrite NZ, serif;
+  font-size: 40px;
+  color: white;
+  margin-left: 8px;
+  margin-top: 36px;
+  display: inline;
+}
+
+.top-left i {
+  font-size: 32px;
+  margin: 36px 0 0 16px;
+}
+
+.top-right {
+  margin-right: 36px;
+  margin-top: 12px;
+}
+
+.top-right h2 {
+  font-size: 28px;
+}
+
+.top-right h2 span {
+  font-family: Playwrite NZ, serif;
+  font-size: 36px;
+}
+
+.top-right h1 {
+  font-size: 40px;
+  margin-top: 28px;
+  text-align: right;
+}
+
+/* Map */
+
+.mapContainer {
+  margin: 36px 48px 0px 48px;
+}
+
+#map {
+  height: 600px;
+  border-radius: 10px;
+}
+
+/* News */
+.news {
+  margin: 80px 48px 0 16px;
+}
+
+.news h2 {
+  font-size: 36px;
+  margin-bottom: 28px;
+}
+
+.eachNews {
+  margin-left: 28px;
+  margin-bottom: 16px;
+  background-color: rgb(227, 229, 230);
+  border-radius: 10px;
+  padding: 8px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.eachNews:hover {
+  background-color: rgb(212, 219, 221);
+}
+
+.eachNews h4 {
+  font-size: 24px;
+  color: black;
+  padding: 4px;
+}
+
+.eachNews p {
+  font-size: 20px;
+  text-indent: 20px;
+  color: black;
+}
+
+.news .moreNews,
+.mapApp {
+  text-align: right;
+  font-size: 18px;
+  display: block;
+}
+
+.mapApp {
+  margin-top: 8px;
+}
+
+/* End details */
+
+.footer {
+  height: 400px;
+  margin-top: 36px;
+  background-color: #3a454e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 72px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details h3 {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.details a {
+  color: rgb(201, 201, 201);
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  color: rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}

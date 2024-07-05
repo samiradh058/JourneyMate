@@ -8,6 +8,7 @@ function get_user($pdo, $username) {
     $stmt->execute();
 
     // Fetch means one row
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);  // Associative array
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Associative array
     return $result;
 }

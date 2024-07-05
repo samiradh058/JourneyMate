@@ -20,13 +20,14 @@ function get_email($pdo, $email){
     return $result;
 }
 
-function set_user($pdo, $username, $email, $pwd) {
-    $query = 'INSERT INTO users (username, email, pwd) VALUES (:username, :email, :pwd)';
+function set_user($pdo, $username, $gender, $email, $pwd) {
+    $query = 'INSERT INTO users (username, gender, email, pwd) VALUES (:username, :gender, :email, :pwd)';
     $stmt = $pdo->prepare($query);
 
     $pwd = sha1($pwd);
 
     $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':gender', $gender);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':pwd', $pwd);
     $stmt->execute();

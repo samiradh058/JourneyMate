@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-image: linear-gradient(to right, #ff8a65, #ffc947, #3f51b5);
+  font-family: Roboto, serif;
 }
 
 .main {
@@ -69,10 +70,12 @@ body {
 }
 
 .heading {
+  font-family: Playwrite NZ, serif;
   color: #ffffff;
-  font-size: 76px;
+  font-size: 66px;
   margin-bottom: 0;
   text-indent: -100px;
+  font-weight: 500;
 }
 
 .paragraph {
@@ -84,7 +87,7 @@ body {
 }
 
 .paragraph2 {
-  text-indent: 80px;
+  text-indent: 84px;
   margin-top: 0;
 }
 

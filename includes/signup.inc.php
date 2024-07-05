@@ -2,6 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
+    $gender = $_POST['gender'];
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
 
@@ -12,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $errors=[];
 
-        if(is_input_empty($username, $email, $pwd)) {
+        if(is_input_empty($username, $gender, $email, $pwd)) {
             $errors['empty_input'] = "Fill in all fields!";
         }
 
@@ -37,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         else{
             $_SESSION['success'] = true;
-            create_user($pdo, $username, $email, $pwd);
+            create_user($pdo, $username, $gender, $email, $pwd);
             header('Location: ../signup.php');
             die();
         }

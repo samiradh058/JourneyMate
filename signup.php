@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JourneyMate</title>
+    <title>JourneyMate: Signup</title>
     <link rel="stylesheet" href="./CSS/login_signup.css">
 </head>
 <body>
@@ -22,6 +22,14 @@
             <div class="form-group">
                 <i class="fas fa-user"></i>
                 <input placeholder="Username" type="text" id='username' name='username'>
+            </div>
+            <div class="form-group">
+            <i class="fa-solid fa-venus-mars"></i>
+                <select name="gender" id="gender" placeholder="Gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
             </div>
             <div class="form-group">
                 <i class="far fa-envelope"></i>

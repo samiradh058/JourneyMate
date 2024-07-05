@@ -19,6 +19,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $result = get_user($pdo, $username);
 
+        $_SESSION['user'] = $result;
+
         if (is_username_wrong($result)) {
             $errors['login_incorrect'] = 'Incorrect username';
         }
@@ -26,8 +28,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!is_username_wrong($result) && is_password_wrong($pwd, $result['pwd'])) {
             $errors['login_incorrect'] = 'Incorrect password';
         }
-
-        echo 'errors';
 
         if($errors) {
             $_SESSION['error_login'] = $errors;
