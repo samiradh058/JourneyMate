@@ -1,4 +1,7 @@
-//Map
+///Map
+
+let map;
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -11,7 +14,7 @@ function showPosition(position) {
   var lat = position.coords.latitude;
   var long = position.coords.longitude;
 
-  var map = L.map("map").setView([lat, long], 12);
+  map = L.map("map").setView([lat, long], 12);
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -124,3 +127,47 @@ async function fetchTourismNews() {
 }
 
 fetchTourismNews();
+
+// Blurring the bottom half when clicking on hamburger
+
+const ham = document.querySelector(".fa-bars");
+const buttomHalf = document.querySelector(".bottom-to-be-blurred-container");
+const upperHalf = document.querySelector(".top-container");
+const sideBar = document.querySelector(".side-bar");
+
+ham.addEventListener("click", function (e) {
+  e.stopPropagation();
+  if (buttomHalf.classList.contains("blur")) {
+    buttomHalf.classList.remove("blur");
+    document.body.style.overflowY = "auto";
+    sideBar.classList.remove("make-visible");
+    if (map) {
+      map.dragging.enable();
+      map.scrollWheelZoom.enable();
+    }
+  } else {
+    buttomHalf.classList.add("blur");
+    document.body.style.overflowY = "hidden";
+    sideBar.classList.add("make-visible");
+    if (map) {
+      map.dragging.disable();
+      map.scrollWheelZoom.disable();
+    }
+  }
+});
+
+upperHalf.addEventListener("click", function () {
+  if (buttomHalf.classList.contains("blur")) {
+    buttomHalf.classList.remove("blur");
+    document.body.style.overflowY = "auto";
+    sideBar.classList.remove("make-visible");
+    if (map) {
+      map.dragging.enable();
+      map.scrollWheelZoom.enable();
+    }
+  }
+});
+
+sideBar.addEventListener("click", function (e) {
+  e.stopPropagation();
+});

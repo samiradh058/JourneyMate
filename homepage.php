@@ -54,6 +54,29 @@ $gender = $result['gender'];
         </div>
 
         <div class="bottom-to-be-blurred-container">
+            <div class="side-bar">
+                <div class="options">
+                <div class="side-bar-item">
+                <i class="fa-solid fa-dollar-sign" style="color: #ff8a65;"></i>
+                    <a href="./homepage.php">Currency Convertor</a>
+                </div>
+                <div class="side-bar-item">
+                <i class="fa-solid fa-book" style="color: #ff8a65;"></i>
+                    <a href="./homepage.php">Dictionary</a>
+                </div> 
+                <div class="side-bar-item">
+                <i class="fa-solid fa-plane-departure" style="color: #ff8165;"></i>
+                    <a href="./homepage.php">My plans</a>
+                </div> 
+                </div>
+                
+                <div class="logout-button">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                    <form action="./includes/logout.inc.php" method="post">
+                        <button type="submit">Logout Now</button>
+                    </form>
+                </div>     
+            </div>
             <div class="mapContainer">
             <div id="map">
             </div>
@@ -103,6 +126,3 @@ $gender = $result['gender'];
 
 
 
-<!-- <form action="./includes/logout.inc.php" method="post">
-        <button type="submit">Logout Now</button>
-    </form> -->
