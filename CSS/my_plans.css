@@ -1,0 +1,128 @@
+* {
+  font-family: Roboto, serif;
+}
+
+.plans_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-icon {
+  height: 160px;
+  margin: 12px 0 0 12px;
+  z-index: 1;
+}
+
+.create_city {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 16px;
+  margin-top: 120px;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.bottom {
+  margin-top: 16px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  height: 76vh;
+}
+
+.list_cities {
+  background-color: grey;
+  width: 20%;
+}
+
+.city_title {
+  background-color: blueviolet;
+  margin-top: 24px;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 12px;
+  font-weight: 500;
+}
+
+.cities {
+  margin-top: 24px;
+}
+
+.cities li {
+  padding: 4px;
+  background-color: aqua;
+  list-style: none;
+  margin-bottom: 8px;
+  margin: 10px 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.pack {
+  background-color: rgb(179, 167, 167);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.add_items {
+  margin: 28px 0 0 12px;
+  padding: 6px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: palegreen;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.packing_list {
+  margin-left: 24px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.item label {
+  transition: color 0.3s ease;
+}
+
+.item input[type="checkbox"]:checked + label {
+  color: green;
+}
