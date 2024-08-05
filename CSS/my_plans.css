@@ -84,6 +84,12 @@
   align-items: center;
   justify-content: center;
   height: 40px;
+  font-size: 24px;
+}
+
+.pack span {
+  font-family: Playwrite NZ, serif;
+  color: rgb(83, 97, 97);
 }
 
 .add_items {

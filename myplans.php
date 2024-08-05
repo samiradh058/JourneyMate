@@ -27,7 +27,7 @@
             </div>
 
             <div class="items">
-                <div class="pack">Pack your bags to go to ""{Paris}""</div>
+                <div class="pack">Pack your bags to go to <span> "{Paris}"</span></div>
 
                 <div class="list_items">
                     <div class="add_items">+ Add items</div>
