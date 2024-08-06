@@ -61,31 +61,21 @@ foreach ($cities as $city) {
 }  ?>
         </ul>
         </div>
-
-        <div class="items">
-          <div class="pack">
-            Pack your bags to go to <span> "{Paris}"</span>
+ 
+        <div class="items none_selected">
+          <!-- <div class="pack">
+            Pack your bags to go to &nbsp;<span id="selected_city"></span>
           </div>
 
           <div class="list_items">
             <div class="add_items">+ Add items</div>
-            <form class="packing_list" action="">
-              <div class="item">
-                <input type="checkbox" />
-                <label for="">Item 1</label>
-              </div>
-              <div class="item">
-                <input type="checkbox" />
-                <label for="">Item 2</label>
-              </div>
-              <div class="item">
-                <input type="checkbox" />
-                <label for="">Item 3</label>
-              </div>
-            </form>
-          </div>
+            <div class="dynamic_items"></div>
+          </div> -->
+          Select a city first!
         </div>
       </div>
     </div>
+
+    <script src="myplans.js"></script>
   </body>
 </html>

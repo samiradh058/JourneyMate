@@ -104,7 +104,7 @@
   cursor: pointer;
 }
 
-.packing_list {
+.dynamic_items {
   margin-left: 24px;
   margin-top: 20px;
   display: grid;
@@ -132,4 +132,12 @@
 
 .item input[type="checkbox"]:checked + label {
   color: green;
+}
+
+.none_selected {
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
