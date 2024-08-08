@@ -141,3 +141,96 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Add city and item  */
+
+.add_item.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.add_city.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgb(211, 186, 186);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.x-btn {
+  position: absolute;
+  top: 2px;
+  right: -2px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.x-btn:hover {
+  color: #ff4d4d;
+}
+
+.add_city h2,
+.add_item h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_city label,
+.add_item label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.add_city input,
+.add_item input {
+  width: 200px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.add_city .submit,
+.add_item .submit {
+  margin: 40px 0 10px 0;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4px 8px;
+  border: none;
+  font-size: 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_city .submit:hover,
+.add_item .submit:hover {
+  background-color: #0056b3;
+}

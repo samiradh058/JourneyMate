@@ -21,7 +21,8 @@ body {
 .success-message {
   color: green;
 }
-    </style>
+    
+</style>
 
 <body>
 <?php

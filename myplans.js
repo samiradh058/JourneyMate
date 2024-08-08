@@ -1,11 +1,13 @@
 const parent = document.querySelector(".cities");
-const listItems = parent.querySelectorAll("li");
+const listCities = parent.querySelectorAll("li");
 const items = document.querySelector(".items");
+
+const form = document.querySelector(".form");
 
 items.classList.add("none_selected");
 
-listItems.forEach((item) => {
-  item.addEventListener("click", function () {
+listCities.forEach((city) => {
+  city.addEventListener("click", function () {
     const cityName = this.textContent;
 
     fetch("./includes/fetch_items.inc.php", {
@@ -55,4 +57,50 @@ listItems.forEach((item) => {
         }
       });
   });
+});
+
+// Make add item and add city division visible
+
+let hasEnteredCity = true;
+let hasEnteredItem = true;
+
+const addItem = document.querySelector(".add_item");
+const addCity = document.querySelector(".add_city");
+
+const cityButton = document.querySelector(".create_city");
+// const itemButton = document.querySelector(".add_items");
+
+const outerDiv = document.querySelector(".plans_container");
+
+cityButton.addEventListener("click", function () {
+  addCity.classList.add("visible");
+  if (hasEnteredCity) {
+    hasEnteredCity = false;
+  }
+});
+
+document
+  .querySelector(".plans_container")
+  .addEventListener("click", function (event) {
+    if (event.target.classList.contains("add_items")) {
+      addItem.classList.add("visible");
+      if (hasEnteredItem) {
+        hasEnteredItem = false;
+      }
+    }
+  });
+
+outerDiv.addEventListener("click", function () {
+  if (addCity.classList.contains("visible")) {
+    if (hasEnteredCity) {
+      addCity.classList.remove("visible");
+    }
+    hasEnteredCity = true;
+  }
+  if (addItem.classList.contains("visible")) {
+    if (hasEnteredItem) {
+      addItem.classList.remove("visible");
+    }
+    hasEnteredItem = true;
+  }
 });

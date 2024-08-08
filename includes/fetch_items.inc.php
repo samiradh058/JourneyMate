@@ -2,6 +2,8 @@
 
 include('dbh.inc.php');
 
+session_start();
+
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -14,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
     $city = $stmt->fetch(PDO::FETCH_ASSOC);
     $cityId = $city['cityId'];
+
+    $_SESSION['cityId'] = $cityId;
 
     //For item
     $query = "SELECT itemName FROM items WHERE cityId = ?";
