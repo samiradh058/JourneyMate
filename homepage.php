@@ -45,7 +45,7 @@ $gender = $result['gender'];
             <i class="fa-solid fa-bars"></i>
             </div>
             <div class="top-right">
-                <h2>Welcome back,<span><?php echo ($gender == 'male'? " Mr.": " Ms.") . $user; ?></span></h2>
+                <h2>Welcome back,<span><?php echo ($gender == 'male'? " Mr. ": " Ms. ") .  $user; ?></span></h2>
                 <h1 id="temp"></h1>
                 <div id="see-weather">
                 </div>

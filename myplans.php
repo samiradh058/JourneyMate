@@ -92,7 +92,11 @@ $cities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 foreach ($cities as $city) {
-    echo "<li>". htmlspecialchars($city['cityName']) . "</li>";
+  $cityName = htmlspecialchars($city['cityName']);
+    echo "<li>
+    <span class='city-name'>$cityName</span>
+    <span class='remove-city'>&times</span>
+    </li>";
 }  ?>
         </ul>
         </div>

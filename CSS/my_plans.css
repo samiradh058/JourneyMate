@@ -20,32 +20,32 @@
 }
 
 .create_city {
-  background-color: grey;
+  background-color: #ffc947;
   padding: 10px;
   border-radius: 5px;
   margin-right: 16px;
   margin-top: 120px;
   font-size: 24px;
   font-weight: 400;
-  color: white;
+  color: #3f51b5;
   cursor: pointer;
 }
 
 .bottom {
   margin-top: 16px;
-  background-color: red;
+  background-color: #3f51b5;
   display: flex;
   flex-direction: row;
   height: 76vh;
 }
 
 .list_cities {
-  background-color: grey;
+  background-color: #ff8a65;
   width: 20%;
 }
 
 .city_title {
-  background-color: blueviolet;
+  background-color: #ff8a65;
   margin-top: 24px;
   width: fit-content;
   padding: 8px;
@@ -53,6 +53,7 @@
   font-size: 20px;
   margin-left: 12px;
   font-weight: 500;
+  color: #fff;
 }
 
 .cities {
@@ -62,13 +63,29 @@
 
 .cities li {
   padding: 4px;
-  background-color: aqua;
+  background-color: #ffc947;
   list-style: none;
   margin-bottom: 8px;
   margin: 10px 10px 0 0;
   font-size: 20px;
   border-radius: 6px;
   cursor: pointer;
+  position: relative;
+}
+
+.remove-city {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.remove-city:hover {
+  color: #d32f2f;
 }
 
 .items {
@@ -78,7 +95,7 @@
 }
 
 .pack {
-  background-color: rgb(179, 167, 167);
+  background-color: #ff8a65;
   width: 100%;
   text-align: center;
   display: flex;
@@ -86,11 +103,13 @@
   justify-content: center;
   height: 40px;
   font-size: 24px;
+  color: #fff;
 }
 
 .pack span {
   font-family: Playwrite NZ, serif;
-  color: rgb(83, 97, 97);
+  font-weight: 800;
+  color: #3f51b5;
 }
 
 .add_items {
@@ -99,8 +118,9 @@
   font-size: 24px;
   font-weight: 400;
   border-radius: 5px;
-  background-color: palegreen;
+  background-color: #ffc947;
   width: fit-content;
+  color: #3f51b5;
   cursor: pointer;
 }
 
@@ -117,7 +137,7 @@
   align-items: center;
   margin-bottom: 10px;
   font-size: 24px;
-  color: white;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -131,11 +151,11 @@
 }
 
 .item input[type="checkbox"]:checked + label {
-  color: green;
+  color: #ff8a65;
 }
 
 .none_selected {
-  color: white;
+  color: #fff;
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -156,7 +176,7 @@
 
 .modal {
   position: fixed;
-  background-color: rgb(211, 186, 186);
+  background-color: #ff8a65;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -173,7 +193,7 @@
   top: 2px;
   right: -2px;
   text-decoration: none;
-  color: white;
+  color: #3f51b5;
   font-weight: 700;
   font-size: 28px;
   margin-right: 12px;
@@ -189,6 +209,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #3f51b5;
 }
 
 .add_city label,
@@ -217,8 +238,8 @@
 .add_city .submit,
 .add_item .submit {
   margin: 40px 0 10px 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #3f51b5;
+  color: #fff;
   padding: 4px 8px;
   border: none;
   font-size: 24px;
@@ -232,5 +253,5 @@
 
 .add_city .submit:hover,
 .add_item .submit:hover {
-  background-color: #0056b3;
+  background-color: #ff8a65;
 }
