@@ -73,8 +73,11 @@ listCities.forEach((city) => {
           body: new URLSearchParams({
             city: cityName,
           }),
+        }).then((response) => {
+          if (response.ok) {
+            location.reload();
+          }
         });
-        location.reload();
       }
     }
   });

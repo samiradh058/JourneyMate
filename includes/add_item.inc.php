@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute();
             header('Location: ../myplans.php'); 
             die();
+
         }
     } catch(PDOException $e) {
         die('City Adding Failed' . $e->getMessage());

@@ -40,7 +40,7 @@
                 <input  placeholder="Password" type="password" id='pwd' name='pwd'>
             </div>
             <?php if(isset($_SESSION['success']) && $_SESSION['success']): ?>
-                <button class='submit' type='button' onclick="window.location.href='./'">Goto Mainpage</button>
+                <button class='submit' type='button' onclick="window.location.href='./login.php'">Login Now</button>
             <?php else: ?>
                 <button class='submit' type='submit'>Signup</button>
             <?php endif; ?>
@@ -56,9 +56,3 @@
 <script src="login_signup.js"></script>
 </body>
 </html>
-
-<?php
-session_unset();
-session_destroy();
-exit();
-?>

@@ -45,6 +45,7 @@ session_start();
     </div>
 
     <div class="plans_container">
+      <a href="./homepage.php" class="top-back" style="position:absolute; background-color:#ffc947; width: fit-content; padding:8px; text-decoration:none; border-radius:10px; font-size:20px;">←</a>
       <div class="top">
         <img
           class="main-icon"
@@ -114,6 +115,11 @@ foreach ($cities as $city) {
         </div>
       </div>
     </div>
+
+    <form action="./includes/logout.inc.php" method="post">
+      <button type="submit" style="position:absolute;right:16px; background-color:#ff8a65; width: fit-content; padding:8px; text-decoration:none; border-radius:10px; font-size:20px; margin-top: -48px">Logout</button>
+    </form>
+
 
     <script src="myplans.js"></script>
   </body>

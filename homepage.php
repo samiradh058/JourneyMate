@@ -35,7 +35,7 @@ $gender = $result['gender'];
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="big-container">
+    <div class="big-container" onLoad="clearHistory()">
         <div class="top-container">
             <div class="top-left">
             <div class="imgAndName">
@@ -113,8 +113,6 @@ $gender = $result['gender'];
             </div>
         </div>
     </div>
-    
-
     <script src="https://kit.fontawesome.com/59b7f1f633.js" crossorigin="anonymous"></script>
     <script src="homepage.js"></script>
 </body>
